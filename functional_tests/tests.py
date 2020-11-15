@@ -57,7 +57,6 @@ class NewVisitorTest(LiveServerTestCase):
         # The page updates again, and now shows both items on her list
         self.wait_for_row_in_list_table('2: Use peacock feathers to make fly')
         self.wait_for_row_in_list_table('1: Buy peacock feathers')
-        time.sleep(3)
 
         # Edith wonders whether the site will remember her list
         # Then she sees that the site has generated a unique URL for her and a description
@@ -104,7 +103,6 @@ class NewVisitorTest(LiveServerTestCase):
         self.assertNotIn('Buy peacock feathers', page_text)
         self.assertIn('Buy milk', page_text)
 
-        time.sleep(3)
 
         # Satisfied, they both go back to sleep
         self.fail('Finish the test!')
